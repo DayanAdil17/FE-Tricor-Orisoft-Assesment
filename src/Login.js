@@ -67,10 +67,8 @@ function Login() {
                     password: password,                    
                 }
             })
-                .then(({ data }) => { 
-                           
-                    console.log("result:", data) 
-                    localStorage.setItem('token', data.access_token)
+                .then(({ data }) => {                                                
+                    localStorage.setItem('token', JSON.stringify(data))
                     window.location.href='/Dashboard'               
                 })
                 .catch((err) => {
