@@ -146,7 +146,7 @@ function Dashboard() {
         spacing={1}
       >
         <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
-          <Paper style={{ marginTop: "5vw", padding: "15px" }} elevate={4}>
+          <Paper style={{ marginTop: "5vw", padding: "15px", backgroundColor:'#f2bda0' }} elevate={4}>
             <Button
               startIcon={<AddIcon />}
               variant="contained"
@@ -164,7 +164,7 @@ function Dashboard() {
               onChange={(event) => {
                 setSearch(event.target.value);
               }}
-              style={{ width: "100%" }}
+              style={{ width: "100%", marginBottom:'10px' }}
             />
             <Paper
               sx={{
@@ -289,7 +289,7 @@ function Dashboard() {
             </AccordionDetails>
           </Accordion>
         </DialogContent>
-        <DialogActions>
+        <DialogActions style={{ display: "flex", justifyContent: "space-between" }}>
           <Button variant="contained" onClick={handleCloseDetail}>
             Close
           </Button>
